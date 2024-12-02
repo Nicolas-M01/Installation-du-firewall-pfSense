@@ -47,3 +47,15 @@ Il faut éditer dans Pfsense en allant dans : `Firewal`>`Rules`>`LAN`
 * La première règle nommée "Anti-lockout Rule" sert à autoriser explicitement l'accès à l'interface de gestion du Pfsense, afin d'éviter de perdre la main si une règle trop restrictive est créée.  
 * La deuxième règle sert à autoriser tous les flux du LAN vers le WAN, en IPv4
 * La troisième règle sert à autoriser tous les flux du LAN vers le WAN, en IPv6
+
+Dans ce menu, sur la 2ème ligne (lignes ds IPv4), cliquer sur le "crayon" à droite dans la colonne "Actions". Pour bloquer les machines du LAN en IPv4, mettre sur "Block", sauvegarder, recherger l'interface.
+Ouvrir une page internet et tester, on voit que l'on obtient un message d'erreur :  
+![Capture d'écran 2024-12-02 170909](https://github.com/user-attachments/assets/29ab79d3-986d-480c-be04-0737d1c4cb18)  
+
+Puis quelques secondes après :  
+![Capture d'écran 2024-12-02 170948](https://github.com/user-attachments/assets/deeb0ba3-a241-4ae3-91ec-2e7be002f4ee)
+
+
+### Notre Pare Feu PfSense fonctionne !
+
+
