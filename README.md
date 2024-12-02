@@ -36,6 +36,14 @@ Ensuite, changer le password.
 
 Le pare feu est prêt à être configuré.
 
-La VM connectée au réseau interne "LAN_VM" et que nous utilisons pour administrer le pare-feu Pfsense dispose d'un accès à Internet. Cela s'explique par le fait que le NAT (via la méthode du PAT) est configuré par défaut sur le pare-feu Pfsense. Pour le vérifier, accédez au menu `Firewall`>`NAT`>`Outbound`, le mode est paramétré sur automatic. Il faudra le mettre en "Manuel" pour modifier les règles.
+La VM connectée au réseau interne "LAN_VM" et que nous utilisons pour administrer le pare-feu Pfsense dispose d'un accès à Internet. Cela s'explique par le fait que le NAT (via la méthode du PAT) est configuré par défaut sur le pare-feu Pfsense. Pour le vérifier, accédez au menu `Firewall`>`NAT`>`Outbound`, le mode est paramétré sur automatic. Il faudra le mettre en "Manuel" pour modifier les règles du parefeu.
 
-Tester la machine cliente, en ouvrant une page internet
+Tester la machine cliente, en ouvrant une page internet et aller sur un site. ça fonctionne.
+
+## Bloquer la machine cliente pour qu'elle ne sorte pas du réseau LAN
+Il faut éditer dans Pfsense en allant dans : `Firewal`>`Rules`>`LAN`  
+
+![Capture d'écran 2024-12-02 165954](https://github.com/user-attachments/assets/3151a8c4-7a1d-4536-8a17-ba5069b189f1)  
+* La première règle nommée "Anti-lockout Rule" sert à autoriser explicitement l'accès à l'interface de gestion du Pfsense, afin d'éviter de perdre la main si une règle trop restrictive est créée.  
+* La deuxième règle sert à autoriser tous les flux du LAN vers le WAN, en IPv4
+* La troisième règle sert à autoriser tous les flux du LAN vers le WAN, en IPv6
