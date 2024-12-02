@@ -27,4 +27,6 @@ Par défaut :
 `Username : admin`  
 `PassWord : pfsense`  
 
-Paramétrer la suite, Hôte, Domaine, DNS (externes), puis Heure...
+Paramétrer la suite, Hôte, Domaine, DNS (externes), puis Heure...  
+Décocher ces cases sinon, tout le trafic entrant sur l'interface WAN en provenance de réseaux privés (comme le réseau 192.168.1.0/24) sera bloqué.
+![image](https://github.com/user-attachments/assets/e13fcb0d-b779-49b6-b340-cf7af03e7aff)
