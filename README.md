@@ -32,3 +32,10 @@ Décocher ces cases sinon, tout le trafic entrant sur l'interface WAN en provena
 ![image](https://github.com/user-attachments/assets/e13fcb0d-b779-49b6-b340-cf7af03e7aff)
 
 Ensuite au step 5/9 (LAN interface), nous avons déjà configuré l'IP statique sur le client donc pas la peine, laisser 192.168.2.1/24.
+Ensuite, changer le password.
+
+Le pare feu est prêt à être configuré.
+
+La VM connectée au réseau interne "LAN_VM" et que nous utilisons pour administrer le pare-feu Pfsense dispose d'un accès à Internet. Cela s'explique par le fait que le NAT (via la méthode du PAT) est configuré par défaut sur le pare-feu Pfsense. Pour le vérifier, accédez au menu `Firewall`>`NAT`>`Outbound`, le mode est paramétré sur automatic. Il faudra le mettre en "Manuel" pour modifier les règles.
+
+Tester la machine cliente, en ouvrant une page internet
