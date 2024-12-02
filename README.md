@@ -18,8 +18,13 @@ Créer une VM Win10 :
 * 1 carte réseau : Réseau interne, le même réseau interne que la machine FireWall.
 Il faut attribuer une adresse statique sur le réseau : 192.168.2.0/24 comme la carte du LAN du Pfsense. Par exemple 192.168.2.2/24 c'est parfait. Et lui ajouter la passerelle de la carte réseau LAN de Pfsense : 192.168.2.1.
 Le DNS pour accéder à internet : 8.8.8.8  
--> Faire un ping vers l'interface LAN de Pfsense. Si c'est ok, ouvrir page internet
- Barre d'URL : 192.168.2.1  
+-> Faire un ping vers l'interface LAN de Pfsense.  
+Si c'est ok, ouvrir page internet  
+
+## Configuration initiale via l'assistant Pfsense (par interface Web)
+Barre d'URL : 192.168.2.1  
 Par défaut :  
 `Username : admin`  
 `PassWord : pfsense`  
+
+Paramétrer la suite, Hôte, Domaine, DNS (externes), puis Heure...
