@@ -7,8 +7,10 @@ Dans VirtualBox, attribuer 2 cartes réseaux :
 
 Lancer l'installation en fraçais, etc...  
 
-## Configuration carte réseau LAN  
+## Configuration carte réseau LAN de la machine Pfsense
 
 Au redémarrage, il faut vérifier la config des cartes réseau. Il faut modifier celle du LAN pour la changer de réseau. (Initialement en 192.168.1.1/24, il faut lui donner par exemple 192.168.2.1/24.
 Pour la passerelle, laisser vide, car on utilisera l'interface WAN pour accéder à Internet. Laissez vide également pour la partie IPv6
 Ne pas accepter le DHCP sur cette carte et ne pas accepter le HTPP (pour rester en HTTPS).
+
+## Configuration carte réseau LAN de la machine cliente (Win10)
